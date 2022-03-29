@@ -98,25 +98,22 @@
     display: flex;
   }
 
-  .desc {
+  .card {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 70px;
+    height: auto;
     border: 1px solid rgba(0, 0, 0, 0.386);
-    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  .desc .card-title {
-    align-self: center;
-    margin-right: 25px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    width: 300px;
+  .card-title {
+    display: flex;
     border-right: 1px solid rgba(0, 0, 0, 0.386);
+    padding: 5px;
   }
 
-  .desc .card-info {
+  .card .card-info {
     margin-right: 15px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -171,24 +168,31 @@
   </div>
 
   <div class="container-body">
-      <div class="desc">
+      <div class="card-title"><strong>titulo</strong><span>quantidade de vezes por dia</span></div>
+      <div class="card">
+        <div class="card-info">
+          <span><strong>Horário:</strong> 08:00</span><br>
+          <span><strong>Checado por:</strong> Augusto</span><br>
+          <span><strong>Motivo:</strong> Em falta na farmácia</span>
+        </div>
+
+        <div class="card-info">
+          <span><strong>Horário:</strong> 08:00</span><br>
+          <span><strong>Checado por:</strong> Augusto</span><br>
+          <span><strong>Motivo:</strong> Em falta na farmácia</span>
+        </div>
+
+      </div>
+
+      <div class="card">
         <div class="card-title"><strong>titulo</strong><br><span>quantidade de vezes por dia</span></div>
         <div class="card-info">
           <span><strong>Horário:</strong> 08:00</span><br>
           <span><strong>Checado por:</strong> Augusto</span><br>
-          <span><strong>Motivo:</strong> Em falta na farmácia ou qualquer infomacao</span>
+          <span><strong>Motivo:</strong> Em falta na farmácia</span>
         </div>
       </div>
 
-      <div class="desc">
-        <div class="card-title"><strong>titulo</strong><br><span>quantidade de vezes por dia</span></div>
-        <div class="card-info"><span>08:00</span><input type="checkbox"><br><span>nome</span></div>
-      </div>
-
-      <div class="desc">
-        <div class="card-title"><strong>titulo</strong><br><span>quantidade de vezes por dia</span></div>
-        <div class="card-info"><span>08:00</span><input type="checkbox"><br><span>Augusto</span></div>
-      </div>
   </div>
 
 
