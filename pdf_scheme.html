@@ -94,19 +94,43 @@
 
 <!--Css body prescription-->
 
-
-  .container-body {
-    width: 100%;
-    height: 100%;
+  .container-body{
+    display: flex;
   }
 
-  .prescription {
+  .desc {
+    display: flex;
+    width: 100%;
+    height: 70px;
     border: 1px solid rgba(0, 0, 0, 0.386);
-    width: 100%;
-    height: 100px;
-    display: -webkit-box;
-    margin-bottom: 16px;
+    margin-top: 10px;
   }
+
+  .desc .card-title {
+    align-self: center;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 300px;
+    border-right: 1px solid rgba(0, 0, 0, 0.386);
+  }
+
+  .desc .card-info {
+    margin-right: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: auto;
+    border: 1px solid rgba(0, 0, 0, 0.386);
+    align-self: center;
+    border-radius: 12px;
+    padding: 5px;
+  }
+
+
+
+
 
 
 </style>
@@ -147,10 +171,26 @@
   </div>
 
   <div class="container-body">
-    <div class="prescription">
+      <div class="desc">
+        <div class="card-title"><strong>titulo</strong><br><span>quantidade de vezes por dia</span></div>
+        <div class="card-info">
+          <span><strong>Horário:</strong> 08:00</span><br>
+          <span><strong>Checado por:</strong> Augusto</span><br>
+          <span><strong>Motivo:</strong> Em falta na farmácia ou qualquer infomacao</span>
+        </div>
+      </div>
 
-    </div>
+      <div class="desc">
+        <div class="card-title"><strong>titulo</strong><br><span>quantidade de vezes por dia</span></div>
+        <div class="card-info"><span>08:00</span><input type="checkbox"><br><span>nome</span></div>
+      </div>
+
+      <div class="desc">
+        <div class="card-title"><strong>titulo</strong><br><span>quantidade de vezes por dia</span></div>
+        <div class="card-info"><span>08:00</span><input type="checkbox"><br><span>Augusto</span></div>
+      </div>
   </div>
+
 
 </body>
 
