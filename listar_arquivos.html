@@ -1,0 +1,124 @@
+{% extends 'arquivos/index.html' %}
+{% block title %}
+    Arquivos Indexados
+{% endblock %}
+
+
+{% block content %}
+    <!-- Modal content -->
+
+            <form id="form-filter" action="." method="get">
+
+                <div class="form-filter-fields" >
+                    <input class="filter-input" type="hidden" name="key" value="{{ request.GET.key }}">
+                    <input class="filter-input" type="hidden" name="numero_prontuario" value="{{ request.GET.numero_prontuario }}">
+                    <input class="filter-input" type="hidden" name="numero_atendimento" value="{{ request.GET.numero_atendimento }}">
+                    <div>
+                        <label for="filter.tipo_documento">Tipo de Documento </label>
+                        <select class="filter-input" id="filter.tipo_documento" name="tipo_documento">
+                            <option selected disabled value="">Escolha um tipo</option>
+                            <option value="d"> Digitalizado</option>
+                            <option value="p"> Prontuário</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="filter.categoria">Categoria </label>
+                        <select class="filter-input" id="filter.categoria" name="categoria">
+                            <option selected disabled value="">Escolha um tipo</option>
+                            {% for key, value in categorias %}
+                                <option value="{{ key }}"> {{ value }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="filter.data_inicio">Data início </label>
+                        <input class="filter-input" type="date" id="filter.data_inicio" name="data_inicio" placeholder="Data início"/>
+                    </div>
+                    <div>
+                        <label for="filter.data_fim">Data fim </label>
+                        <input class="filter-input" type="date" id="filter.data_fim" name="data_fim" placeholder="Data fim"/>
+                    </div>
+
+                </div>
+                <div class="form-filter-submit">
+                    <div class="form-filter-submit">
+                        <input type="submit" value="Filtrar" >
+                    </div>
+
+                    <div class="form-filter-reset">
+                        <button class="button-clear" onclick="clearFilters()">Limpar</button>
+                    </div>
+                </div>
+
+        </form>
+
+    <div class="table-wrapper">
+        <table aria-describedby="Tabela">
+            <thead>
+                <tr>
+                    {% for header in table_headers %}
+                    <th id="table-header">{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+            {% for arquivo in arquivos %}
+                <tr style="text-align: center">
+
+                    <td>{{ arquivo.nome}}</td>
+                    <td>{% if arquivo.cpf %}{{ arquivo.cpf}}{% else %}Não informado{% endif %}</td>
+                    <td>{{ arquivo.numero_prontuario}}</td>
+                    <td>{{ arquivo.numero_atendimento}}</td>
+                    <td>{{ arquivo.get_tipo_documento_display}}</td>
+                    <td>{{ arquivo.get_categoria_display}}</td>
+                    <td>{{ arquivo.data_entrada}}</td>
+                    <td>{{ arquivo.data_arquivo}}</td>
+                    <td> {% if arquivo.observacao %}{{ arquivo.observacao}}{% else %}Não há observações{% endif %}</td>
+
+                    <td style="text-align: center">
+                        <a class="btn btn-primary"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           href="{{ arquivo.url}}"
+                           style="border-bottom: none;">
+
+                            <em class="fas fa-file-pdf"></em>
+                        </a>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        let tipo_documento = document.getElementById('filter.tipo_documento')
+        let categoria = document.getElementById("filter.categoria")
+        let data_inicio = document.getElementById('filter.data_inicio')
+        let data_fim = document.getElementById('filter.data_fim')
+
+
+        categoria.value = {% if request.GET.categoria %} "{{ request.GET.categoria }}" {% else %} '' {% endif %};
+        tipo_documento.value = {% if request.GET.tipo_documento %} "{{ request.GET.tipo_documento }}" {% else %} '' {% endif %};
+        data_inicio.value = {% if request.GET.data_inicio  %} "{{ request.GET.data_inicio  }}" {% else %} '' {% endif %};
+        data_fim.value = {% if request.GET.data_fim  %} "{{ request.GET.data_fim  }}" {% else %} '' {% endif %};
+
+    const clearFilters = () => {
+        let form_filter = document.getElementById('form-filter')
+        let form_fields = document.getElementsByClassName('filter-input')
+        for (let i=0;  i < form_fields.length; i++){
+            if (form_fields[i].type !== 'hidden'){
+                form_fields[i].value = ''
+            }
+        }
+
+        form_filter.submit()
+
+    }
+    </script>
+{% endblock %}
