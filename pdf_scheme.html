@@ -68,28 +68,11 @@
     margin: 8px 0 0 0;
   }
 
-  .img-doc {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    width: auto;
-    max-width: 100%;
-    height: 80%;
-    background-size: contain;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    /* object-fit: contain; */
-    opacity: 0.99;
-  }
-
   hr {
     width: 90%;
     margin: 16px 0;
   }
 
-  .name-file {
-    text-align: center;
-  }
 
 
 <!--Css body prescription-->
@@ -105,6 +88,12 @@
     height: auto;
     border: 1px solid rgba(0, 0, 0, 0.386);
     margin-bottom: 15px;
+  }
+
+  @media print {
+    .card {
+      page-break-inside: avoid;
+    }
   }
 
   .card-title {
@@ -142,7 +131,6 @@
   }
 
   .card-checkbox input {
-    cursor: pointer;
     width: 15px;
     height: 15px;
   }
@@ -157,12 +145,12 @@
   }
 
   .card-signature .signature-hospital {
-    align-self: end;
+    align-self: center;
     text-align: center;
   }
 
   .card-signature .signature-doctor {
-    align-self: end;
+    align-self: center;
     text-align: center;
   }
 
@@ -172,105 +160,119 @@
     padding: 5px;
   }
 
+    header {
+      top: 0;
+      width: 100%
+    }
+
+    footer {
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
 </style>
 
 <body>
-  <div class="container-header">
-    <div class="item-break">
-      <div class="header">
-        <div class="logo-header-content">
-          <img class="logo-header"
-            src="https://omnisaude.co/assets/img/logo_omnisaude.png"
-            alt="logo" />
+
+  <header>
+    <div class="container-header">
+      <div class="item-break">
+        <div class="header">
+          <div class="logo-header-content">
+            <img class="logo-header"
+              src="https://omnisaude.co/assets/img/logo_omnisaude.png"
+              alt="logo" />
+          </div>
+          <hr class="divider-header" />
+          <table class="tags-header">
+            <tr>
+              <td><strong>Paciente:</strong> Augusto Machado do Nascimento</td>
+              <td><strong>Atendimento:</strong> 32.814</td>
+            </tr>
+
+            <tr>
+              <td><strong>Dt. Nasc:</strong> 23/02/1991</td>
+              <td><strong>Convênio:</strong> Unimed Anápolis / Alta Complexidade Com VM</td>
+            </tr>
+
+            <tr>
+              <td><strong>Dt. Entrada:</strong> 28/03/2022 11:28</td>
+              <td><strong>Sexo:</strong> Masculino</td>
+            </tr>
+
+            <tr>
+              <td><strong>Médico Resp:</strong> Dr. Antonio Cesar Teixeira (CRM 2552)</td>
+              <td><strong>Matrícula:</strong> 000001</td>
+            </tr>
+          </table>
         </div>
-        <hr class="divider-header" />
-        <table class="tags-header">
-          <tr>
-            <td><strong>Paciente:</strong> Augusto Machado do Nascimento</td>
-            <td><strong>Atendimento:</strong> 32.814</td>
-          </tr>
-
-          <tr>
-            <td><strong>Dt. Nasc:</strong> 23/02/1991</td>
-            <td><strong>Convênio:</strong> Unimed Anápolis / Alta Complexidade Com VM</td>
-          </tr>
-
-          <tr>
-            <td><strong>Dt. Entrada:</strong> 28/03/2022 11:28</td>
-            <td><strong>Sexo:</strong> Masculino</td>
-          </tr>
-
-          <tr>
-            <td><strong>Médico Resp:</strong> Dr. Antonio Cesar Teixeira (CRM 2552)</td>
-            <td><strong>Matrícula:</strong> 000001</td>
-          </tr>
-        </table>
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="container-body">
 
-      <div class="card">
-
-        <!--titulo principal e intervalo-->
-        <div class="card-title" style="background-color: #d4d6d9;">
-          <div style="width: 850px;"><span><strong>Modulo Em Pó De Proteina Do Soro Do Leite</strong></span></div>
-          <div><span><strong>Intervalo: </strong>Fosvita Sachê 7g Via Gastrostomia 1 Sachê Intermitente Intervalo: 1x - uma vez ao dia</span></div>
-        </div>
-
-        <!--documento assinado digitalmente-->
-        <div class="card-title"><span>Documento assinado digitalmente de acordo com a ICP-Brasil, MP 2.200-2/2001, Resolução CFM 1821/2007, no sistema certificado SBIS-CFM-068 por Vanessa Nunes Mendes, CPF 03900737177, CRN 10567,
-        Nutricionista, às 13:12-03:00 de 07/03/2022 - Válida - b94935220e81819fc96a6711c5864a24</span></div>
-
-        <!--card de horário-->
-        <div class="card-info">
-          <span><strong>Horário:</strong> 08:00</span><br>
-          <span><strong>Checado por:</strong> Augusto</span><br>
-          <span><strong>Motivo:</strong> Em falta na farmácia</span>
-        </div>
-        <div class="card-checkbox">
-          <input type="checkbox">
-        </div>
-
-        <!--card de horário-->
-        <div class="card-info">
-          <span><strong>Horário:</strong> 08:00</span><br>
-          <span><strong>Checado por:</strong> Augusto</span><br>
-          <span><strong>Motivo:</strong> Em falta na farmácia</span>
-        </div>
-        <div class="card-checkbox">
-          <input type="checkbox">
-        </div>
-
-        <!--observações de medicamento-->
-        <div class="card-title"><span><strong>Observação: </strong>ADMINISTRAR 2ML 1X AO DIA</span></div>
-      </div>
-
-  </div>
-
-</body>
-
-<footer>
-
-  <div class="container-footer">
     <div class="card">
-      <div class="card-signature">
-          <div class="signature-hospital">
-            <span>_________________________________________________</span><br><br>
-            <span>Home Care Anápolis UNIMED 01</span>
-          </div>
 
-          <div class="signature-doctor">
-            <span>_________________________________________________</span><br><br>
-            <span>Eros de Sousa Junior - CRM 14652</span>
-          </div>
-
-          <div class="datetime-now"><strong>Impresso em:</strong> 14/03/2022 16:34:17</div>
+      <!--titulo principal e intervalo-->
+      <div class="card-title" style="background-color: #d4d6d9;">
+        <div style="width: 850px;"><span><strong>Modulo Em Pó De Proteina Do Soro Do Leite</strong></span></div>
+        <div><span><strong>Intervalo: </strong>Fosvita Sachê 7g Via Gastrostomia 1 Sachê Intermitente Intervalo: 1x - uma vez ao dia</span></div>
       </div>
+
+      <!--documento assinado digitalmente-->
+      <div class="card-title"><span>Documento assinado digitalmente de acordo com a ICP-Brasil, MP 2.200-2/2001,
+      Resolução CFM 1821/2007, no sistema certificado SBIS-CFM-068 por Vanessa Nunes Mendes, CPF 03900737177, CRN 10567,
+      Nutricionista, às 13:12-03:00 de 07/03/2022 - Válida - b94935220e81819fc96a6711c5864a24</span></div>
+
+      <!--card de horário-->
+      <div class="card-info">
+        <span><strong>Horário:</strong> 08:00</span><br>
+        <span><strong>Checado por:</strong> Augusto</span><br>
+        <span><strong>Motivo:</strong> Em falta na farmácia</span>
+      </div>
+      <div class="card-checkbox">
+        <input type="checkbox">
+      </div>
+
+      <!--card de horário-->
+      <div class="card-info">
+        <span><strong>Horário:</strong> 08:00</span><br>
+        <span><strong>Checado por:</strong> Augusto</span><br>
+        <span><strong>Motivo:</strong> Em falta na farmácia</span>
+      </div>
+      <div class="card-checkbox">
+        <input type="checkbox">
+      </div>
+
+      <!--observações de medicamento-->
+      <div class="card-title"><span><strong>Observação: </strong>ADMINISTRAR 2ML 1X AO DIA</span></div>
     </div>
   </div>
 
-</footer>
+  <footer>
+    <div class="container-footer">
+      <div class="card">
+        <div class="card-signature">
+            <div class="signature-hospital">
+              <span>_________________________________________________</span><br>
+              <span>Home Care Anápolis UNIMED 01</span>
+            </div>
+
+            <div class="signature-doctor">
+              <span>_________________________________________________</span><br>
+              <span>Eros de Sousa Junior - CRM 14652</span>
+            </div>
+
+            <div class="datetime-now"><strong>Impresso em:</strong> 14/03/2022 16:34:17</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+
 
 </html>
