@@ -10,8 +10,6 @@
         }
 
         body {
-            border: 1px solid #c7c7c7;
-            border-radius: 10px;
             padding: 10px;
             height: 100%;
         }
@@ -44,7 +42,7 @@
         }
 
         .diagnoses {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .info {
@@ -59,7 +57,7 @@
         }
 
         .medical-print {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .medical-print .text-area {
@@ -67,37 +65,44 @@
         }
 
         .fluid-balance-and-vital-signs {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .general-physical-exam {
-            margin-top: 20px;
+            margin-top: 40px;
+        }
+
+        .breaking-column {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
         }
 
         .break-apart-1  {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin-top: 20px;
         }
 
         .break-apart-2 {
             display: flex;
-            flex-direction: row;
-            margin-bottom: 20px;
+            flex-direction: column;
+            margin-top: 20px;
         }
 
         .checks {
-            width: 220px;
+            width: 300px;
             margin-bottom: 10px;
         }
 
         .respiratory-evaluation {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .list-checks {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             margin-top: 20px;
         }
 
@@ -113,7 +118,7 @@
         }
 
         .abdominal-evaluation {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .break {
@@ -125,19 +130,19 @@
         }
 
         .break .checks {
-            width: 300px;
+            width: 350px;
         }
 
         .cardiology-evaluation {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .neurological-evaluation {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .medical-conduct {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
          .medical-conduct .text-area {
@@ -145,7 +150,7 @@
         }
 
         .therapeutic-plan {
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .therapeutic-plan .text-area {
@@ -172,6 +177,47 @@
             text-align: center;
         }
 
+        @media print {
+            .diagnoses {
+                page-break-inside: avoid;
+            }
+
+            .medical-print {
+                page-break-inside: avoid;
+            }
+
+            .fluid-balance-and-vital-signs {
+                page-break-inside: avoid;
+            }
+
+            .general-physical-exam {
+                page-break-inside: avoid;
+            }
+
+            .respiratory-evaluation {
+                page-break-inside: avoid;
+            }
+
+            .abdominal-evaluation {
+                page-break-inside: avoid;
+            }
+
+            .cardiology-evaluation {
+                page-break-inside: avoid;
+            }
+
+            .neurological-evaluation {
+                page-break-inside: avoid;
+            }
+
+            .medical-conduct {
+                page-break-inside: avoid;
+            }
+
+            .therapeutic-plan {
+                page-break-inside: avoid;
+            }
+        }
 
     </style>
 
@@ -232,20 +278,21 @@
         <div class="general-physical-exam">
             <fieldset>
                 <legend><strong>Exame físico geral</strong></legend>
-                <div class="break-apart-1">
-                    <div class="checks"><input type="checkbox"> Regular estado geral</div>
-                    <div class="checks"><input type="checkbox"> Lesão de pele</div>
-                    <div class="checks"><input type="checkbox"> TEC>5s</div>
-                    <div class="checks"><input type="checkbox"> Piora clínica</div>
-                    <div class="checks"><input type="checkbox"> Acesso venoso central</div>
-                </div>
-                <div class="break-apart-2">
-                    <div class="checks"><input type="checkbox"> Vômitos no período</div>
-                    <div class="checks"><input type="checkbox"> Desnutrição</div>
-                    <div class="checks"><input type="checkbox"> Sonda vesical de demora</div>
-                    <div class="checks"><input type="checkbox"> Edema periférico</div>
-                    <div class="checks"><input type="checkbox"> Febre</div>
-
+                <div class="breaking-column">
+                    <div class="break-apart-1">
+                        <div class="checks"><input type="checkbox"> Regular estado geral</div>
+                        <div class="checks"><input type="checkbox"> Lesão de pele</div>
+                        <div class="checks"><input type="checkbox"> TEC>5s</div>
+                        <div class="checks"><input type="checkbox"> Piora clínica</div>
+                        <div class="checks"><input type="checkbox"> Acesso venoso central</div>
+                    </div>
+                    <div class="break-apart-2">
+                        <div class="checks"><input type="checkbox"> Vômitos no período</div>
+                        <div class="checks"><input type="checkbox"> Desnutrição</div>
+                        <div class="checks"><input type="checkbox"> Sonda vesical de demora</div>
+                        <div class="checks"><input type="checkbox"> Edema periférico</div>
+                        <div class="checks"><input type="checkbox"> Febre</div>
+                    </div>
                 </div>
                 <div class="text-area">
                     <label>Observações:</label>
