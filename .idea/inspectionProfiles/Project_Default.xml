@@ -1,82 +1,10 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="myValues">
-        <value>
-          <list size="10">
-            <item index="0" class="java.lang.String" itemvalue="nobr" />
-            <item index="1" class="java.lang.String" itemvalue="noembed" />
-            <item index="2" class="java.lang.String" itemvalue="comment" />
-            <item index="3" class="java.lang.String" itemvalue="noscript" />
-            <item index="4" class="java.lang.String" itemvalue="embed" />
-            <item index="5" class="java.lang.String" itemvalue="script" />
-            <item index="6" class="java.lang.String" itemvalue="h3" />
-            <item index="7" class="java.lang.String" itemvalue="imput" />
-            <item index="8" class="java.lang.String" itemvalue="h1" />
-            <item index="9" class="java.lang.String" itemvalue="h4" />
-          </list>
-        </value>
-      </option>
-      <option name="myCustomValuesEnabled" value="true" />
-    </inspection_tool>
-    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoredPackages">
-        <value>
-          <list size="1">
-            <item index="0" class="java.lang.String" itemvalue="Django" />
-          </list>
-        </value>
-      </option>
-    </inspection_tool>
-    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
-      <option name="ignoredErrors">
-        <list>
-          <option value="W292" />
-          <option value="E303" />
-          <option value="E722" />
-        </list>
-      </option>
-    </inspection_tool>
     <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
           <option value="N802" />
-          <option value="N801" />
-          <option value="N803" />
-        </list>
-      </option>
-    </inspection_tool>
-    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
-      <option name="ignoredNames">
-        <list>
-          <option value="filter" />
-          <option value="list" />
-        </list>
-      </option>
-    </inspection_tool>
-    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="ignoredIdentifiers">
-        <list>
-          <option value="django.db.models.fields.related.OneToOneField.first_name" />
-          <option value="estudo.models.Question.objects" />
-          <option value="estudo.models.Question.DoesNotExist" />
-          <option value="contatos.models.Contato.objects" />
-          <option value="contas.api.serializer.__all__" />
-          <option value="type.with_ui" />
-          <option value="vagas.models.Candidate.objects" />
-          <option value="int.exists" />
-          <option value="int.int" />
-          <option value="auditoria_analise.models.requisicao_em_analise_item.RequisicaoEmAnaliseItem.objects" />
-          <option value="auditoria_analise.models.requisicao_em_analise.RequisicaoEmAnalise.objects" />
-          <option value="auditoria_analise.models.auditoria_requisicao_em_analise.AuditoriaRequisicaoEmAnalise.objects" />
-          <option value="auditoria_concorrente.models.item_guia.ItemGuia.objects" />
-          <option value="health_check.models.status.Status.*" />
-          <option value="health_check.models.application.Application.*" />
-          <option value="auditoria_concorrente.models.User" />
-          <option value="internacao.models.internacao_beneficiario.BeneficiarioInternado.*" />
-          <option value="core.models.v2.anexo.AnexoItemAuditado.objects" />
-          <option value="internacao.models.anexo.AnexoVisitaDeInternacao.*" />
         </list>
       </option>
     </inspection_tool>

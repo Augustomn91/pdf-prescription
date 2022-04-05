@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Evolução Médica</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            border: 1px solid #c7c7c7;
+            border-radius: 10px;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .container-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid #c7c7c7;
+            font-size: 25px;
+        }
+
+        .header {
+            padding-top: 21px;
+            padding-left: 10px;
+        }
+
+        .time {
+            padding-top: 30px;
+            padding-right: 10px;
+            font-size: 14px;
+        }
+
+        .container-body {
+            height: auto;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .diagnoses {
+            margin-top: 20px;
+        }
+
+        .info {
+            padding-top: 20px;
+            padding-left: 10px;
+            padding-bottom: 15px;
+        }
+
+        .text-area textarea {
+            width: 99.5%;
+            height: 100px;
+        }
+
+        .medical-print {
+            margin-top: 20px;
+        }
+
+        .medical-print .text-area {
+            padding-top: 15px;
+        }
+
+        .fluid-balance-and-vital-signs {
+            margin-top: 20px;
+        }
+
+        .general-physical-exam {
+            margin-top: 20px;
+        }
+
+        .break-apart-1  {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .break-apart-2 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+        }
+
+        .checks {
+            width: 220px;
+            margin-bottom: 10px;
+        }
+
+        .respiratory-evaluation {
+            margin-top: 20px;
+        }
+
+        .list-checks {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .option-ventilation {
+            display: flex;
+            flex-direction: row;
+            padding-top: 15px;
+            padding-left: 20px;
+        }
+
+        .option-ventilation .ventilation {
+            width: 120px;
+        }
+
+        .abdominal-evaluation {
+            margin-top: 20px;
+        }
+
+        .break {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .break .checks {
+            width: 300px;
+        }
+
+        .cardiology-evaluation {
+            margin-top: 20px;
+        }
+
+        .neurological-evaluation {
+            margin-top: 20px;
+        }
+
+        .medical-conduct {
+            margin-top: 20px;
+        }
+
+         .medical-conduct .text-area {
+            padding-top: 15px;
+        }
+
+        .therapeutic-plan {
+            margin-top: 20px;
+        }
+
+        .therapeutic-plan .text-area {
+            padding-top: 15px;
+        }
+
+        .card-signature {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: auto;
+            border-top: 1px solid #c7c7c7;
+            padding-top: 30px;
+        }
+
+        .card-signature .signature-hospital {
+            align-self: end;
+            text-align: center;
+        }
+
+        .card-signature .signature-doctor {
+            align-self: end;
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="header"><span><strong>Evolução Médica</strong></span></div>
+            <div class="time"><span>04/04/2022 14:07</span></div>
+        </div>
+    </header>
+
+    <div class="container-body">
+        <div class="diagnoses">
+            <fieldset>
+                <legend><strong>Diagnósticos</strong></legend>
+                <div class="info">
+                    <span> - Hipertensão arterial sistêmica</span><br><br>
+                    <span> - Insulficiência cardíaca</span><br><br>
+                    <span> - Doença renal crônica</span><br><br>
+                    <span> - Doença pulmonar obstrutiva crônica</span><br><br>
+                </div>
+                <div class="text-area">
+                    <label>Observações: </label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="medical-print">
+            <fieldset>
+                <legend><strong>Impressão Médica</strong></legend>
+                <div class="text-area">
+                    <label>Observações: </label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="fluid-balance-and-vital-signs">
+            <fieldset>
+                <legend><strong>Balanço hídrico e sinais vitais</strong></legend>
+                <div class="info">
+                    <span><strong> - Frequência cardíaca: </strong>informação</span><br><br>
+                    <span><strong> - Frequência respiratória: </strong>informação</span><br><br>
+                    <span><strong> - Saturação de oxigênio: </strong>informação</span><br><br>
+                    <span><strong> - Pressão arterial: </strong>informação</span><br><br>
+                    <span><strong> - Diurese em 24h: </strong>informação</span><br><br>
+                    <span><strong> - Ganhos em 24h: </strong>informação</span><br><br>
+                    <span><strong> - Balanço hídrico em 24h: </strong>informação</span><br><br>
+                    <span><strong> - Temperatura máxima em 24h: </strong>informação</span><br><br>
+                    <span><strong> - Evacuações nas úlitmas 24h: </strong>informação</span><br><br>
+                    <span><strong> - HGT máximo nas últimas 24h: </strong>informação</span><br><br>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="general-physical-exam">
+            <fieldset>
+                <legend><strong>Exame físico geral</strong></legend>
+                <div class="break-apart-1">
+                    <div class="checks"><input type="checkbox"> Regular estado geral</div>
+                    <div class="checks"><input type="checkbox"> Lesão de pele</div>
+                    <div class="checks"><input type="checkbox"> TEC>5s</div>
+                    <div class="checks"><input type="checkbox"> Piora clínica</div>
+                    <div class="checks"><input type="checkbox"> Acesso venoso central</div>
+                </div>
+                <div class="break-apart-2">
+                    <div class="checks"><input type="checkbox"> Vômitos no período</div>
+                    <div class="checks"><input type="checkbox"> Desnutrição</div>
+                    <div class="checks"><input type="checkbox"> Sonda vesical de demora</div>
+                    <div class="checks"><input type="checkbox"> Edema periférico</div>
+                    <div class="checks"><input type="checkbox"> Febre</div>
+
+                </div>
+                <div class="text-area">
+                    <label>Observações:</label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="respiratory-evaluation">
+            <fieldset>
+                <legend><strong>Avaliação respiratória</strong></legend>
+                <div class="list-checks">
+                    <div class="checks"><input type="checkbox"> Eupneico sem alterações</div>
+                    <div class="checks"><input type="checkbox"> Estertoração audível</div>
+                    <div class="checks"><input type="checkbox"> Tosse ineficaz</div>
+                    <div class="checks"><input type="checkbox"> Traqueostomia</div>
+                </div>
+                <div class="info">
+                    <span><strong> - Secreção pulmonar: </strong> Ausente</span><br><br>
+                    <span><strong> - Ventilação: </strong>Ventilação mecânica invasiva</span>
+                    <div class="option-ventilation">
+                        <div class="ventilation"><strong>FiO2: </strong>11</div>
+                        <div class="ventilation"><strong>PEEP: </strong>22</div>
+                        <div class="ventilation"><strong>VC: </strong>33</div>
+                        <div class="ventilation"><strong>PINS: </strong>44</div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="abdominal-evaluation">
+            <fieldset>
+                <legend><strong>Avaliação abdominal</strong></legend>
+                <div class="break">
+                    <div class="checks"><input type="checkbox"> Abdome flácido e sem alterações</div>
+                    <div class="checks"><input type="checkbox"> Gastrostomia</div>
+                    <div class="checks"><input type="checkbox"> Sonda nasoenteral</div>
+                    <div class="checks"><input type="checkbox"> Dieta via oral razoável aceitação</div>
+                    <div class="checks"><input type="checkbox"> Dieta via oral com baixa aceitação</div>
+                </div>
+                <div class="text-area">
+                    <label>Observações:</label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="cardiology-evaluation">
+            <fieldset>
+                <legend><strong>Avaliação cardiológica</strong></legend>
+                <div class="break">
+                    <div class="checks"><input type="checkbox"> Normocardio e sem alterações</div>
+                    <div class="checks"><input type="checkbox"> Ritmo cardíaco irregular</div>
+                    <div class="checks"><input type="checkbox"> Marcapasso</div>
+                    <div class="checks"><input type="checkbox"> Sopro audível</div>
+                </div>
+                <div class="text-area">
+                    <label>Observações:</label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="neurological-evaluation">
+            <fieldset>
+                <legend><strong>Avaliação neurológica</strong></legend>
+                <div class="info">
+                    <span><strong> - Escala glasgow: </strong>6</span>
+                </div>
+                <div class="text-area">
+                    <label>Observações:</label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="medical-conduct">
+            <fieldset>
+                <legend><strong>Conduta médica</strong></legend>
+                <div class="text-area">
+                    <label>Observações:</label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="therapeutic-plan">
+            <fieldset>
+                <legend><strong>plano terapêutico</strong></legend>
+                <div class="text-area">
+                    <label>Observações:</label>
+                    <textarea></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="card">
+                <div class="card-signature">
+                    <div class="signature-hospital">
+                        <span>_________________________________________________</span><br>
+                        <span>Home Care Anápolis UNIMED 01</span>
+                    </div>
+
+                    <div class="signature-doctor">
+                        <span>_________________________________________________</span><br>
+                        <span>Eros de Sousa Junior - CRM 14652</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pdfkit.iml" filepath="$PROJECT_DIR$/.idea/pdfkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pdf-prescription.iml" filepath="$PROJECT_DIR$/.idea/pdf-prescription.iml" />
     </modules>
   </component>
 </project>
