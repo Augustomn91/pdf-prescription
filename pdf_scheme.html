@@ -9,73 +9,60 @@
 <style>
   * {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
   }
 
   .container-header {
-    width: 100%;
-    height: 100%;
+    border: 1px solid #c7c7c7;
+    border-radius: 12px;
+    height: auto;
+    margin-bottom: 50px;
   }
 
   .header {
-    border: 1px solid rgba(0, 0, 0, 0.386);
-    width: 100%;
-    height: 136px;
-    display: -webkit-box;
-    margin-bottom: 16px;
-    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
   }
 
-  .logo-header-content {
-    padding-top: 51px;
-    height: 100%;
-    margin-left: 10px;
-  }
-
-  .divider-header {
-    border-left: 1px solid rgba(0, 0, 0, 0.386);
-    border-bottom: none;
-    border-top: none;
-    border-right: none;
-    width: 1px;
-    margin-left: 16px;
-  }
-
-  table {
-    height: 60%;
-    width: 80%;
-    margin-left: 14px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-
-  td {
-    padding: 5px;
-  }
-
-  .tags-header td strong{
-    background-color: #d4d6d9;
-    padding: 4px;
+  .header-logo-content {
+    display: flex;
+    align-items: center;
   }
 
   .logo-header {
     height: 32px;
-    margin-left: 22px;
-    font-weight: bold;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 
-  .logo-text {
-    margin: 8px 0 0 0;
+  .divider-header {
+    border: 1px solid #c7c7c7;
+    margin-right: 15px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  hr {
-    width: 90%;
-    margin: 16px 0;
+  .header-content {
+    display: flex;
+    flex-direction: row;
   }
 
+  .header-content .part {
+    margin-top: 18px;
+  }
 
+  .header-content .checks {
+    height: 25px;
+    width: auto;
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-<!--Css body prescription-->
+  .header-content .checks strong {
+    background: #c7c7c7;
+  }
 
   .container-body{
     display: flex;
@@ -88,6 +75,7 @@
     height: auto;
     border: 1px solid rgba(0, 0, 0, 0.386);
     margin-bottom: 15px;
+    font-size: 12px;
   }
 
   @media print {
@@ -145,13 +133,15 @@
   }
 
   .card-signature .signature-hospital {
-    align-self: center;
+    margin-top: 25px;
     text-align: center;
+    color: #858585;
   }
 
   .card-signature .signature-doctor {
-    align-self: center;
+    margin-top: 25px;
     text-align: center;
+    color: #858585;
   }
 
   .card-signature .datetime-now {
@@ -160,55 +150,37 @@
     padding: 5px;
   }
 
-    header {
-      top: 0;
-      width: 100%
-    }
 
-    footer {
-      bottom: 0;
-      width: 100%;
-    }
-  }
 
 </style>
 
 <body>
 
   <header>
-    <div class="container-header">
-      <div class="item-break">
-        <div class="header">
-          <div class="logo-header-content">
-            <img class="logo-header"
-              src="https://omnisaude.co/assets/img/logo_omnisaude.png"
-              alt="logo" />
+      <div class="container-header">
+          <div class="header">
+              <div class="header-logo-content">
+                  <img class="logo-header" src="https://omnisaude.co/assets/img/logo_omnisaude.png" alt="logo" />
+              </div>
+
+              <div class="divider-header"></div>
+
+              <div class="header-content">
+                  <div class="part">
+                      <div class="checks"><span><strong>Paciente:</strong> Augusto Machado do Nascimento</span></div>
+                      <div class="checks"><span><strong>Dt. Nasc:</strong> 23/02/1991</span></div>
+                      <div class="checks"><span><strong>Dt. Entrada:</strong> 05/04/2022 10:28</span></div>
+                      <div class="checks"><span><strong>Médico Resp:</strong> Dr. Antonio Cesar Teixeira (CRM 2552)</span></div>
+                  </div>
+                  <div class="part">
+                      <div class="checks"><span><strong>Atendimento:</strong> 32.814</span></div>
+                      <div class="checks"><span><strong>Convênio:</strong> Unimed Anápolis</span></div>
+                      <div class="checks"><span><strong>Sexo:</strong> Masculino</span></div>
+                      <div class="checks"><span><strong>Matrícula:</strong> 000001</span></div>
+                  </div>
+              </div>
           </div>
-          <hr class="divider-header" />
-          <table class="tags-header">
-            <tr>
-              <td><strong>Paciente:</strong> Augusto Machado do Nascimento</td>
-              <td><strong>Atendimento:</strong> 32.814</td>
-            </tr>
-
-            <tr>
-              <td><strong>Dt. Nasc:</strong> 23/02/1991</td>
-              <td><strong>Convênio:</strong> Unimed Anápolis / Alta Complexidade Com VM</td>
-            </tr>
-
-            <tr>
-              <td><strong>Dt. Entrada:</strong> 28/03/2022 11:28</td>
-              <td><strong>Sexo:</strong> Masculino</td>
-            </tr>
-
-            <tr>
-              <td><strong>Médico Resp:</strong> Dr. Antonio Cesar Teixeira (CRM 2552)</td>
-              <td><strong>Matrícula:</strong> 000001</td>
-            </tr>
-          </table>
-        </div>
       </div>
-    </div>
   </header>
 
   <div class="container-body">
@@ -243,7 +215,12 @@
         <span><strong>Motivo:</strong> Em falta na farmácia</span>
       </div>
       <div class="card-checkbox">
-        <input type="checkbox">
+        <input type="checkbox" id="l">
+        <label for="l"></label>
+        <input type="checkbox" id="x">
+        <label for="x"></label>
+        <input type="checkbox" id="n">
+        <label for="n"></label>
       </div>
 
       <!--observações de medicamento-->

@@ -15,6 +15,58 @@
         }
 
         .container-header {
+            border: 1px solid #c7c7c7;
+            border-radius: 12px;
+            height: auto;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            font-size: 10px;
+        }
+
+        .header-logo-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-header {
+            height: 20px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        .divider-header {
+            border: 1px solid #c7c7c7;
+            margin-right: 15px;
+            height: 150px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .header-content .part {
+            margin-top: 28px;
+        }
+
+        .header-content .checks {
+            height: 35px;
+            width: auto;
+            margin: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .header-content .checks strong {
+            background: #c7c7c7;
+        }
+
+        .container-title {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -22,9 +74,10 @@
             height: 50px;
             border-bottom: 1px solid #c7c7c7;
             font-size: 25px;
+            margin-top: 50px;
         }
 
-        .header {
+        .title {
             padding-top: 21px;
             padding-left: 10px;
         }
@@ -32,13 +85,18 @@
         .time {
             padding-top: 30px;
             padding-right: 10px;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .container-body {
             height: auto;
             margin-top: 30px;
             padding: 10px;
+            font-size: 12px;
+        }
+
+        fieldset {
+            border: 1px solid #c7c7c7;
         }
 
         .diagnoses {
@@ -54,6 +112,7 @@
         .text-area textarea {
             width: 99.5%;
             height: 100px;
+            border-color: #c7c7c7;
         }
 
         .medical-print {
@@ -163,8 +222,9 @@
             justify-content: space-around;
             width: 100%;
             height: auto;
-            border-top: 1px solid #c7c7c7;
             padding-top: 30px;
+            font-size: 10px;
+            color: #858585;
         }
 
         .card-signature .signature-hospital {
@@ -175,6 +235,21 @@
         .card-signature .signature-doctor {
             align-self: end;
             text-align: center;
+        }
+
+        .card-sign {
+            border: 1px solid #c7c7c7;
+            font-size: 10px;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 12px;
+        }
+
+        .card-filled-by {
+            font-size: 10px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         @media print {
@@ -217,6 +292,10 @@
             .therapeutic-plan {
                 page-break-inside: avoid;
             }
+
+            .card-signature {
+                page-break-inside: avoid;
+            }
         }
 
     </style>
@@ -225,7 +304,31 @@
 <body>
     <header>
         <div class="container-header">
-            <div class="header"><span><strong>Evolução Médica</strong></span></div>
+            <div class="header">
+                <div class="header-logo-content">
+                    <img class="logo-header" src="https://omnisaude.co/assets/img/logo_omnisaude.png" alt="logo" />
+                </div>
+
+                <div class="divider-header"></div>
+
+                <div class="header-content">
+                    <div class="part">
+                        <div class="checks"><span><strong>Paciente:</strong> Augusto Machado do Nascimento</span></div>
+                        <div class="checks"><span><strong>Dt. Nasc:</strong> 23/02/1991</span></div>
+                        <div class="checks"><span><strong>Dt. Entrada:</strong> 05/04/2022 10:28</span></div>
+                        <div class="checks"><span><strong>Médico Resp:</strong> Dr. Antonio Cesar Teixeira (CRM 2552)</span></div>
+                    </div>
+                    <div class="part">
+                        <div class="checks"><span><strong>Atendimento:</strong> 32.814</span></div>
+                        <div class="checks"><span><strong>Convênio:</strong> Unimed Anápolis</span></div>
+                        <div class="checks"><span><strong>Sexo:</strong> Masculino</span></div>
+                        <div class="checks"><span><strong>Matrícula:</strong> 000001</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-title">
+            <div class="title"><span><strong>Evolução Médica</strong></span></div>
             <div class="time"><span>04/04/2022 14:07</span></div>
         </div>
     </header>
@@ -403,7 +506,20 @@
                         <span>_________________________________________________</span><br>
                         <span>Eros de Sousa Junior - CRM 14652</span>
                     </div>
+                </div>
 
+                <div class="card-sign">
+                    <div class="digital-sign">
+                        <span>
+                            Documento assinado digitalmente de acordo com a ICP-Brasil, MP 2.200-2/2001,
+                            Resolução CFM 1821/2007, no sistema certificado SBIS-CFM-068 por Vanessa Nunes Mendes,
+                            CPF 03900737177, CRN 10567,Nutricionista, às 13:12-03:00 de 07/03/2022 -
+                            Válida - b94935220e81819fc96a6711c5864a24
+                        </span>
+                    </div>
+                </div>
+                <div class="card-filled-by">
+                    <span><strong>Preenchido por:</strong> Rafael Alessandro</span>
                 </div>
             </div>
         </div>
